@@ -1,9 +1,9 @@
 const axios = require('axios');
 
 // Thông tin xác thực của bot
-const API_KEY = 'Bot JsytjQsBBUHZY6cqjyrNdu43w9WHoUZomhUAyOJf9jUryyOF9v37kkNVJ5syeWvX'; // Thay bằng API key của bạn
+const API_KEY = 'Bot 1bDO19r9tsGCgqwM6dUmp8FMMrHSlccmjknhJM0SPj3Peux6ia1W2TkNYnr0Opms'; // Thay bằng API key của bạn
 const BASE_URL = 'https://api.wolvesville.com';
-const CLAN_ID = '4de945de-cc70-4e72-82d5-5edc3d8af77a'; // Thay bằng ID của clan của bạn
+const CLAN_ID = 'cc5349ec-5fde-4af9-8f0d-b3a831bd8c4d'; // Thay bằng ID của clan của bạn
 
 // Hàm để lấy nhiệm vụ hiện tại của clan
 async function getActiveQuest() {
