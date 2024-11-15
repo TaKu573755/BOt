@@ -1,0 +1,32 @@
+name: Clan Quest Scheduler
+
+on:
+  schedule:
+    - cron: '0 */5 * * *'
+
+  workflow_dispatch: # Allows you to manually trigger the workflow
+
+jobs:
+  run-clan-quest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run handleClanQuest
+        run: |
+          node -e "
+          setInterval(() => {
+            const { handleClanQuest } = require('./index');
+            handleClanQuest();
+          }, 30000);  // Every 30 seconds
+          "
